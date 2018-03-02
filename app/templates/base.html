@@ -1,11 +1,14 @@
 <html>
   <head>
 
+{% block header %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %} - Survey Monkey </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- 1. import css file here -->
+    <link rel="stylesheet" href="../static/main.css">
+
 
 <!-- how to extend header to other templates -->
     <div id="site-title-wrapper">
@@ -14,6 +17,8 @@
       </div>
       <h3 id="site-title">Survey Monkey</h3>
     </div>
+{% endblock %}
+
   </head>
 
   <body>

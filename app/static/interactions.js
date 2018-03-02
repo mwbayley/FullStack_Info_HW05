@@ -4,6 +4,20 @@ $('#submit-survey').on('click', function submitSurvey() {
 	var vacation = $("input[name=vacation]").val();
 	var feBefore = $("input[name=front-end-before]").val();
 	var feAfter = $("input[name=front-end-after]").val();
+    console.log("trying to submit");
+    $.post('submit-survey', {
+            color: color,
+            food: food,
+            vacation: vacation,
+            feBefore: feBefore,
+            feAfter: feAfter
+            }
+        ).done(
+            function (reply) {
+                $(document.body.parentNode).html(reply);
+                }
+            )
+        ;
 });
 
 $("#site-title-wrapper").on('click', function goHome() {
